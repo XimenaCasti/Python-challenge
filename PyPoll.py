@@ -52,21 +52,10 @@ with open(csvpath, newline='', encoding='utf-8') as csvfile:
 
     print('Winner:', Winner )
     print("______________________")    
-# Specify the output file path
-output_path = os.path.join("C:/Users/ximen/OneDrive/Escritorio", "election_results.txt")
 
-# Open the output file in write mode and write the results
-with open(output_path, 'w') as output_file:
-    output_file.write("Election Results\n")
-    output_file.write("______________________\n")
-    output_file.write(f"Total Votes: {Total_Votes}\n")
-    output_file.write("________________\n")
 
-    # Write the results for each candidate
-    for candidate, votes in Candidates_votes_dictionary.items():
-        percentage = (votes / Total_Votes) * 100
-        output_file.write(f'{candidate}: {percentage:.3f}% ({votes})\n')
+     # Open the output file in write mode and write the results
+    with open("C:/Users/ximen/OneDrive/Escritorio/Penn_Data/3rd Module/election_results.txt", 'w') as txt_file:
+        txt_file.write("election_results")
 
-    output_file.write("______________________\n")
-    output_file.write(f'Winner: {Winner}\n')
 
