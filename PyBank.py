@@ -62,17 +62,7 @@ with open(csvpath, newline='', encoding='UTF-8') as csvfile:
     print("Greatest Decrease in Profits:", greatest_decrease_month, "($", greatest_decrease, ")")
 
 
-# Specify the output file path
-output_path = os.path.join("C:/Users/ximen/OneDrive/Escritorio", "financial_analysis.txt")
-
 # Open the output file in write mode and write the results
-with open(output_path, 'w') as output_file:
-    output_file.write("Financial Analysis\n")
-    output_file.write("______________________\n")
-    output_file.write(f"Total months: {num_months}\n")
-    output_file.write(f"Total Profit/Losses: ${total_profit_losses}\n")
-    output_file.write(f'Average Change: ${average_change:.2f}\n')
-    output_file.write(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})\n")
-    output_file.write(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})\n")
-
+with open("C:/Users/ximen/OneDrive/Escritorio/Penn_Data/3rd Module/financial_analysis.txt", 'w') as txt_file:
+    txt_file.write("financial_analysis.txt")
 
